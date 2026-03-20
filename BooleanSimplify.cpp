@@ -76,17 +76,7 @@ void algebraicSimplify(const BooleanResult& br, int n) {
     
     bool changed = true;
     while (changed) {
-        changed = false;
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        changed = false;    
         
         for (int i = 0; i < static_cast<int>(terms.size()) && !changed; ++i) {
             for (int j = i + 1; j < static_cast<int>(terms.size()) && !changed; ++j) {
@@ -132,16 +122,6 @@ void algebraicSimplify(const BooleanResult& br, int n) {
             }
         }
         if (changed) continue;   
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         for (int i = 0; i < static_cast<int>(terms.size()) && !changed; ++i) {
             for (int j = 0; j < static_cast<int>(terms.size()) && !changed; ++j) {
@@ -160,21 +140,6 @@ void algebraicSimplify(const BooleanResult& br, int n) {
             }
         }
         if (changed) continue;   
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         for (int i = 0; i < static_cast<int>(terms.size()) && !changed; ++i) {
             for (int j = 0; j < static_cast<int>(terms.size()) && !changed; ++j) {
@@ -186,11 +151,7 @@ void algebraicSimplify(const BooleanResult& br, int n) {
 
                 
                 if (conflictBits == 0 || (conflictBits & (conflictBits - 1)) != 0)
-                    continue;
-
-                
-                
-                
+                    continue;          
                 
                 int consensusMask  = (terms[i].mask  | terms[j].mask)  & ~conflictBits;
                 int consensusValue = (terms[i].value | terms[j].value) & ~conflictBits;
